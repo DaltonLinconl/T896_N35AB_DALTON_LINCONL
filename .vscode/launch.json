@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/dalto/OneDrive/Documentos/Unifor/Semestre 8/ProcessamentoDigitalImagem/AV2/Projeto2_Deteccao_Circulos",
+      "program": "c:/Users/dalto/OneDrive/Documentos/Unifor/Semestre 8/ProcessamentoDigitalImagem/AV2/Projeto2_Deteccao_Circulos/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
