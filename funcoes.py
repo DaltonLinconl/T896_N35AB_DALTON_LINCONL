@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def carregar_imagem_rgb(caminho: str) -> np.ndarray:
+def carregar_imagem(caminho: str, cor="cinza") -> np.ndarray:
     """
     Carrega uma imagem a partir de um caminho especificado.
 
@@ -14,9 +14,13 @@ def carregar_imagem_rgb(caminho: str) -> np.ndarray:
         numpy.ndarray: A imagem carregada.
     """
     img = cv2.imread(caminho)
-    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    return img_rgb
+    if cor == "cinza":
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    elif cor == "rgb":
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+    return img
 
 
 def exibir_imagem(imagem: np.ndarray, titulo: str = "Imagem") -> None:
